@@ -9,8 +9,9 @@ Description=Remote Extra Functions
 After=network-online.target
 
 [Service]
+# necessary delay - could not identify required module to load before this! Otherwise, fails.
+ExecStartPre=/bin/sleep 60
 ExecStart=/home/volumio/VolumioBoomboxExtras/remote_extras.py
-user=root
 Restart=on-failure
 
 [Install]
