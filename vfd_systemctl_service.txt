@@ -1,0 +1,18 @@
+# sudo cp ~/VolumioBoomboxExtras/vfd_systemctl_service.txt /etc/systemd/system/vfd_now_playing.service 
+# sudo chmod 644 /etc/systemd/system/vfd_now_playing.service
+# sudo systemctl daemon-reload
+# sudo systemctl enable vfd_now_playing
+# sudo systemctl restart vfd_now_playing
+# 
+
+[Unit]
+Description=VFD Now Playing
+After=network-online.target
+
+[Service]
+ExecStart=/home/volumio/VolumioBoomboxExtras/vfd_now_playing.py
+user=root
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

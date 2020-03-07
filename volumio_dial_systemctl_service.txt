@@ -1,0 +1,17 @@
+# sudo cp ~/VolumioBoomboxExtras/volumio_dial_systemctl_service.txt /etc/systemd/system/volumio_dial.service 
+# sudo chmod +x /etc/systemd/system/volumio_dial.service
+# sudo systemctl daemon-reload
+# sudo systemctl enable volumio_dial
+# sudo systemctl restart volumio_dial   
+
+[Unit]
+Description=Remote Extra Functions
+After=network-online.target
+
+[Service]
+ExecStart=/home/volumio/VolumioBoomboxExtras/volumio_dial.py
+user=root
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
