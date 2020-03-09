@@ -1,2 +1,2 @@
-![volumio boombox](https://github.com/thisoldgeek/VolumioBoomboxExtras/IMG_0224.JPG)
+![](IMG_0224.jpg)
 # Volumio Boombox Extras
