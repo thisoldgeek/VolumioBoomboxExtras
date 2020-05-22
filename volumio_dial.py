@@ -18,9 +18,9 @@ socketIO = SocketIO('localhost', 3000)
 play_on = 1 # plays: 1 = play, 0 = pause
 
 # Define GPIO inputs
-VOLUME_UP =     17 	# Pin 11    Clockwise
-VOLUME_DOWN =   27	# Pin 13   Anticlockwise
-MUTE_SWITCH =   22	# Pin 15   Button Down
+VOLUME_UP =     23 	#    Clockwise
+VOLUME_DOWN =   24	#    Anticlockwise
+MUTE_SWITCH =   27	#    Button Down
 
 # This is the event callback routine to handle events
 def volume_event(event):

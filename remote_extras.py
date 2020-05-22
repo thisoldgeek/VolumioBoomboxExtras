@@ -10,7 +10,7 @@ import VFD
 GPIO.setmode(GPIO.BCM)
 music_display= 0          # toggle this variable to tell arduino to show light effects for music
                           # you can't read an output directly, so read the variable and set the output
-GPIO.setup(24, GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(25, GPIO.OUT, initial=GPIO.LOW)
 
 sockid = lirc.init("irexec","/home/volumio/VolumioBoomboxExtras/lircrc")
    
